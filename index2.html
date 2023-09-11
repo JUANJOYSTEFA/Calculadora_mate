@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style2.css">
+		<title>Calculadora</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<section class="screen" id="calcInput">0</section>
+			<section class="calc-buttons">
+				<div class="calc-button-row">
+					<button class="calc-button double" onclick="addToInput('C')">C</button>
+					<button class="calc-button" onclick='addToInput()'>°</button>
+					<button class="calc-button" onclick='addToInput()'></button>
+				</div>
+				<div class="calc-button-row">
+					<button class="calc-button" onclick='addToInput(7)'>7</button>
+					<button class="calc-button" onclick='addToInput(8)'>8</button>
+					<button class="calc-button" onclick='addToInput(9)'>9</button>
+					<button class="calc-button">"</button>
+				</div>
+				<div class="calc-button-row">
+					<button class="calc-button" onclick='addToInput(4)'>4</button>
+					<button class="calc-button" onclick='addToInput(5)'>5</button>
+					<button class="calc-button" onclick='addToInput(6)'>6</button>
+					<button class="calc-button"></button>
+				</div>
+				<div class="calc-button-row">
+					<button class="calc-button" onclick='addToInput(1)'>1</button>
+					<button class="calc-button" onclick='addToInput(2)'>2</button>
+					<button class="calc-button" onclick='addToInput(3)'>3</button>
+					<button class="calc-button"></button>
+				</div>
+				<div class="calc-button-row">
+					<button class="calc-button triple" onclick='addToInput(0)'>0</button>
+					<button class="calc-button">&equals;</button>
+				</div>
+			</section>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
