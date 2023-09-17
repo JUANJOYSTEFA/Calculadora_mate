@@ -90,4 +90,8 @@ span{
 	top: 5%;
 	left: 6%;
 	font-size: larger;
+	border: none;
+}
+a{
+	color: #232323;
 }
