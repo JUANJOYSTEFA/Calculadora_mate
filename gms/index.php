@@ -5,12 +5,12 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<title>Calculadora</title>
+	<title>GMS->Grados Decimales</title>
 	<style>
 		.menu {
 			width: 20%;
 			height: 100%;
-			background-color: rgba(255, 255, 255, 0.75);
+			background-color: rgba(255, 255, 255, 0.55);
 		}
 
 		.pagina {
@@ -22,7 +22,8 @@
 
 <body>
 	<div class="menu">
-		<span>Grados Decimales -> GMS</span>
+		<a href="/calculadora_mate/grados/"><span>Grados Decimales->GMS</span></a><br><br>
+		<a href="/calculadora_mate/gms/"><span>GMS->Grados Decimales</span></a>
 	</div>
 	<div class="pagina">
 		<div class="wrapper">
