@@ -9,7 +9,7 @@
 </head>
 
 <body>
-			<div class="wrapper">
+	<div class="wrapper">
 		<h1>Ingrese Los Grados Decimales:</h1>
 		<form action="" method="post">
 			<input type="number" class="input" name="grados" step="0.00001">
@@ -20,19 +20,19 @@
 			<br>
 			<h1>
 				<?php
-					if (isset($_POST['grados'])) {
-						$grados = strval($_POST['grados']);
-						$decimal = floor($grados);
-						$minutosDecimal = ($grados - $decimal) * 60;
-						$minutos = floor($minutosDecimal);
-						$segundos = ($minutosDecimal - $minutos) * 60;
-						$resultado = sprintf("%d° %d' %.2f\"", $grados, $minutos, round($segundos));
-						echo $resultado;
-					}
+				if (isset($_POST['grados'])) {
+					$grados = strval($_POST['grados']);
+					$decimal = floor($grados);
+					$minutosDecimal = ($grados - $decimal) * 60;
+					$minutos = floor($minutosDecimal);
+					$segundos = ($minutosDecimal - $minutos) * 60;
+					$resultado = sprintf("%d° %d' %.2f\"", $grados, $minutos, round($segundos));
+					echo $resultado;
+				}
 				?>
 			</h1>
 		</center>
-				</div>
+	</div>
 </body>
 
 </html>
