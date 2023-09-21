@@ -34,7 +34,7 @@ body {
 	-webkit-backdrop-filter: blur(4px);
 	background: rgba(255, 255, 255, 0.3);
 	border: 1px solid rgba(255, 255, 255, 0.34);
-	height: 70%;
+	height: 75%;
 	width: 50%;
 	padding: 20px 35px;
 }
@@ -75,23 +75,26 @@ h2 {
 	position: relative;
 	top: 15px;
 }
-.menu{
-	width: 20%;
+.menu {
+	width: 25%;
 	height: 100%;
 	background-color: rgba(255, 255, 255, 0.5);
 	border-radius: 0 30px 30px 0;
+	text-align: center;
 }
-.pagina{
-	width: 80%;
+.pagina {
+	width: 75%;
 	height: 100%;
 }
-span{
+span {
 	position: relative;
 	top: 5%;
-	left: 6%;
-	font-size: larger;
-	border: none;
+	font-size: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	width: 100%;
 }
-a{
+a {
 	color: #232323;
+	text-decoration: none;
 }

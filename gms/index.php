@@ -5,36 +5,32 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<title>GMS->Grados Decimales</title>
-	<style>
-		.menu {
-			width: 20%;
-			height: 100%;
-			background-color: rgba(255, 255, 255, 0.55);
-		}
-
-		.pagina {
-			width: 80%;
-			height: 100%;
-		}
-	</style>
+	<title>GMS -> Grados Decimales</title>
 </head>
 
 <body>
 	<div class="menu">
 		<a href="/calculadora_mate/grados/"><span>Grados Decimales->GMS</span></a><br><br>
-		<a href="/calculadora_mate/gms/"><span>GMS->Grados Decimales</span></a>
+		<a href="/calculadora_mate/gms/"><span>GMS->Grados Decimales</span></a><br><br>
+		<a href="/calculadora_mate/grds-rad/"><span>Grados->Radianes</span></a><br><br>
+		<a href="/calculadora_mate/rad-grds/"><span>Radianes->Grados</span></a><br><br>
+		<a href="/calculadora_mate/arco/"><span>Calcular longitud de arco</span></a><br><br>
+		<a href="/calculadora_mate/area/"><span>Calcular Área del sector circular</span></a><br><br>
+		<a href="/calculadora_mate/vangular/"><span>Calcular Velocidad Angular</span></a><br><br>
+		<a href="/calculadora_mate/vlineal/"><span>Calcular Velocidad Lineal</span></a><br><br>
 	</div>
 	<div class="pagina">
 		<div class="wrapper">
 			<form action="" method="post">
-				<h1>Ingrese Los Grados:</h1>
-				<input type="number" class="input" name="grados">
-				<h1>Ingrese Los Minutos:</h1>
-				<input type="number" class="input" name="minutos">
-				<h1>Ingrese Los Segundos:</h1>
-				<input type="number" class="input" name="segundos">
-				<input type="submit" value="Calcular" class="submit">
+				<center>
+					<h1>Ingrese Los Grados:</h1><br>
+					<input type="number" class="input" name="grados">
+					<h1>Ingrese Los Minutos:</h1><br>
+					<input type="number" class="input" name="minutos">
+					<h1>Ingrese Los Segundos:</h1><br>
+					<input type="number" class="input" name="segundos">
+					<input type="submit" value="Calcular" class="submit">
+				</center>
 			</form>
 			<center>
 				<h1 class="result">Resultado:</h1>
