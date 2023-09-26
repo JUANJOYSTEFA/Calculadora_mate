@@ -42,11 +42,19 @@ body {
 .input {
 	position: relative;
 	top: 5%;
-	width: 83%;
+	width: 55%;
 	height: 8%;
 	border-radius: 10px;
 	border: none;
 	font-size: 30px;
+	padding: 5px;
+}
+.select {
+	width: 30%;
+	height: 8%;
+	border-radius: 10px;
+	border: none;
+	font-size: 15px;
 	padding: 5px;
 }
 .submit {
@@ -97,4 +105,7 @@ span {
 a {
 	color: #232323;
 	text-decoration: none;
+}
+ul {
+	list-style: none;
 }

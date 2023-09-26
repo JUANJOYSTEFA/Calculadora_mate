@@ -24,11 +24,11 @@
 			<form action="" method="post">
 				<center>
 					<h1>Ingrese Los Grados:</h1><br>
-					<input type="number" class="input" name="grados">
+					<input type="number" class="input" name="grados" min="0">
 					<h1>Ingrese Los Minutos:</h1><br>
-					<input type="number" class="input" name="minutos">
+					<input type="number" class="input" name="minutos" min="0">
 					<h1>Ingrese Los Segundos:</h1><br>
-					<input type="number" class="input" name="segundos">
+					<input type="number" class="input" name="segundos" min="0">
 					<input type="submit" value="Calcular" class="submit">
 				</center>
 			</form>
@@ -40,7 +40,7 @@
 					$grados = 0;
 					$minutos = 0;
 					$segundos = 0;
-					if (isset($_POST['grados'])) {
+					if (!empty($_POST['grados']) and !empty($_POST['minutos']) and !empty($_POST['segundos'])) {
 						$grados = floatval($_POST['grados']);
 					}
 					if (isset($_POST['minutos'])) {

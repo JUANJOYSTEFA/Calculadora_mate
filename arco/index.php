@@ -21,11 +21,36 @@
 	</div>
 	<div class="pagina">
 		<div class="wrapper">
-			<h1>Ingrese Los Grados Decimales:</h1>
+
 			<form action="" method="post">
 				<center>
-					<input type="number" class="input" name="grados" step="0.00001">
-					<input type="submit" value="Calcular" class="submit">
+					<ul>
+						<li>
+							<h1>Ingrese El Radio:</h1>
+						</li>
+						<li>
+							<input type="number" class="input" name="arco" min="0">
+							<select name="arcom" class="select">
+								<option>Centimetros</option>
+								<option>Metros</option>
+								<option>Kilometros</option>
+							</select>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h1>Ingrese El Ángulo:</h1>
+						</li>
+						<li>
+							<input type="number" class="input" name="angulo" min="0">
+							<select name="angulom" class="select">
+								<option>Grados</option>
+								<option>Radianes</option>
+							</select>
+						</li>
+					</ul>
+					<input type="submit" value="Calcular" class="submit" name="submit">
+
 				</center>
 			</form>
 			<center>
@@ -33,14 +58,7 @@
 				<br>
 				<h1>
 					<?php
-					if (isset($_POST['grados'])) {
-						$grados = strval($_POST['grados']);
-						$decimal = floor($grados);
-						$minutosDecimal = ($grados - $decimal) * 60;
-						$minutos = floor($minutosDecimal);
-						$segundos = ($minutosDecimal - $minutos) * 60;
-						$resultado = sprintf("%d° %d' %.2f\"", $grados, $minutos, round($segundos));
-						echo $resultado;
+					if (!empty($_POST['arco']) && !empty($_POST['angulo'])) {
 					}
 					?>
 				</h1>

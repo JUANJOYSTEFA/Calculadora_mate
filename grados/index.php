@@ -24,7 +24,7 @@
 			<h1>Ingrese Los Grados Decimales:</h1>
 			<form action="" method="post">
 				<center>
-					<input type="number" class="input" name="grados" step="0.00001">
+					<input type="number" class="input" name="grados" step="0.00001" min="0">
 					<input type="submit" value="Calcular" class="submit">
 				</center>
 			</form>
@@ -33,7 +33,7 @@
 				<br>
 				<h1>
 					<?php
-					if (isset($_POST['grados'])) {
+					if (!empty($_POST['grados'])) {
 						$grados = strval($_POST['grados']);
 						$decimal = floor($grados);
 						$minutosDecimal = ($grados - $decimal) * 60;
