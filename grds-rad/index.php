@@ -21,10 +21,10 @@
 	</div>
 	<div class="pagina">
 		<div class="wrapper">
-			<h1>Ingrese Los Grados Decimales:</h1>
+			<h1>Ingrese Los Grados:</h1>
 			<form action="" method="post">
 				<center>
-					<input type="number" class="input" name="grados" step="0.00001">
+					<input type="number" class="input" name="grados" min="0">
 					<input type="submit" value="Calcular" class="submit">
 				</center>
 			</form>
@@ -33,14 +33,23 @@
 				<br>
 				<h1>
 					<?php
-					if (isset($_POST['grados'])) {
-						$grados = strval($_POST['grados']);
-						$decimal = floor($grados);
-						$minutosDecimal = ($grados - $decimal) * 60;
-						$minutos = floor($minutosDecimal);
-						$segundos = ($minutosDecimal - $minutos) * 60;
-						$resultado = sprintf("%d° %d' %.2f\"", $grados, $minutos, round($segundos));
-						echo $resultado;
+					if (!empty($_POST['grados'])) {
+						$grados = $_POST['grados'];
+						function calcularMCD($a, $b)
+						{
+							while ($b != 0) {
+								$temp = $b;
+								$b = $a % $b;
+								$a = $temp;
+							}
+							return $a;
+						}
+						$mcd = calcularMCD($grados, 180);
+						$numerador = $grados / $mcd;
+						$denominador = 180 / $mcd;
+						echo "La respuesta Exacta es: <br> $numerador / $denominador &pi; Rad<br>";
+						$radianes = ($grados * M_PI) / 180;
+						echo "La respuesta Redondeada es: <br> $radianes Rad";
 					}
 					?>
 				</h1>

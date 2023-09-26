@@ -29,8 +29,8 @@
 							<h1>Ingrese El Radio:</h1>
 						</li>
 						<li>
-							<input type="number" class="input" name="arco" min="0">
-							<select name="arcom" class="select">
+							<input type="number" class="input" name="radio" min="0">
+							<select name="unidadRadio" class="select">
 								<option>Centimetros</option>
 								<option>Metros</option>
 								<option>Kilometros</option>
@@ -42,8 +42,8 @@
 							<h1>Ingrese El Ángulo:</h1>
 						</li>
 						<li>
-							<input type="number" class="input" name="angulo" min="0">
-							<select name="angulom" class="select">
+							<input type="number" class="input" name="angulo" min="0" step="0.00001">
+							<select name="unidadAngulo" class="select">
 								<option>Grados</option>
 								<option>Radianes</option>
 							</select>
@@ -54,11 +54,19 @@
 				</center>
 			</form>
 			<center>
-				<h1 class="result">Resultado:</h1>
 				<br>
 				<h1>
 					<?php
-					if (!empty($_POST['arco']) && !empty($_POST['angulo'])) {
+					if (!empty($_POST['radio']) && !empty($_POST['angulo'])) {
+						$unidad = $_POST['unidadRadio'];
+						$radio = $_POST['radio'];
+						$unidadGrado = $_POST['unidadAngulo'];
+						$grados = $_POST['angulo'];
+						if ($unidadGrado == "Grados") {
+							$grados = ($grados * M_PI) / 180;
+						}
+						$arco = $grados * $radio;
+						echo "La longitud del arco es: $arco $unidad";
 					}
 					?>
 				</h1>

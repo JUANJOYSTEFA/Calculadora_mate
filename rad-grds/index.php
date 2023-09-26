@@ -21,10 +21,10 @@
 	</div>
 	<div class="pagina">
 		<div class="wrapper">
-			<h1>Ingrese Los Grados Decimales:</h1>
+			<h1>Ingrese Los Radianes:</h1>
 			<form action="" method="post">
 				<center>
-					<input type="number" class="input" name="grados" step="0.00001">
+					<input type="number" class="input" name="radianes" min="0" step="0.000001">
 					<input type="submit" value="Calcular" class="submit">
 				</center>
 			</form>
@@ -33,14 +33,10 @@
 				<br>
 				<h1>
 					<?php
-					if (isset($_POST['grados'])) {
-						$grados = strval($_POST['grados']);
-						$decimal = floor($grados);
-						$minutosDecimal = ($grados - $decimal) * 60;
-						$minutos = floor($minutosDecimal);
-						$segundos = ($minutosDecimal - $minutos) * 60;
-						$resultado = sprintf("%d° %d' %.2f\"", $grados, $minutos, round($segundos));
-						echo $resultado;
+					if (!empty($_POST['radianes'])) {
+						$radianes = $_POST['radianes'];
+						$grados = $radianes * (180 / M_PI);
+						echo "La respuesta Redondeada es: <br> $grados °";
 					}
 					?>
 				</h1>
